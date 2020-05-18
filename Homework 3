@@ -1,0 +1,70 @@
+
+#excercise one
+import math
+import time
+def odd_even(input_string):
+    n1 = int(input_string)
+    if(n1 % 2 ) == 0:
+        print("even")
+    elif(n1 % 2 ) != 0:
+        print("odd")
+    if(n1 % 3 ) == 0:
+        print("divisible by three.")
+    if(n1) == 0:
+        print("zero.")
+odd_even(input("imput a number: "))
+
+#excercise two
+def excercise_two(input_string):
+    n2 = int(input_string)
+    if((n2 % 2 == 0) and (n2 % 3 != 0)) or ((n2 % 2 != 0) and (n2 % 3 == 0)):
+        print("true")
+    else:
+        print("false")
+excercise_two(input("give me a number, please: "))
+
+#excercise three
+print('Experts and Educators often do not agree with President Trump.')
+print('This will test your own understanding of truth but also that of President Trump')
+print("Please chose one of the following: ")
+print("1: Coronavirus (COVID-19) is killing people.")
+print("2: President Obama was born in the United States.")
+print("3: Trump University was a totally legitimate place of education.")
+def president_true_false(input_string):
+    user_input = int(input_string)
+    if user_input == 1:
+        ans1 = input("According to experts, is this a true or false statement?")
+        ans2 = input("According to President Trump, is this a true or false statement?")
+        if ans1 == "true" and ans2 == "true":
+            print("This is a case of agrement between experts and the President. Though perspective may differ.")
+        elif ans1 == "false" and ans2 == "true":
+            print("People are dying from COVID-19. This is something that both parties agree on")
+        else:
+            print("You may want to look up this thing called COVID-19. Best to be informed during these times")
+    elif user_input == 2:
+        ans1 = input("According to experts, is this a true or false statement?")
+        ans2 = input("According to President Trump, is this a true or false statement?")
+        if ans1 == "true" and ans2 == "false":
+            print("Correct. President Obama was born in Hawaii.")
+        elif ans1 == "false" and ans2 == "false":
+            print("Though President Trump started the birther movement he has been disproven.")
+        else:
+            print("Maybe you missed the whole birther scandal")
+    elif user_input == 3:
+        ans1 = input("According to experts, is this a true or false statement?")
+        ans2 = input("According to President Trump, is this a true or false statement?")
+        if ans1 == "false" and ans2 == "true":
+            print("Correct. In fact, the President is being sued for fraud.")
+        elif ans1 == "true" and ans2 == "true":
+            print("Incorrect. Trump University was fraudulent and legal charges are pending.")
+        else:
+            print("You may want to reaserch this case")
+    else:
+        while user_input !=1 or user_input !=2 or user_input!=3:
+            user_input = input("You have not entered a valid selection. Please try again: gle") ;
+            if user_input == 1 or user_input == 2 or user_input==3:
+                break
+            president_true_false(user_input)
+            
+president_true_false(input("Choose, it's up to you: "))
+time.sleep(2)
